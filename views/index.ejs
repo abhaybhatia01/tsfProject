@@ -1,11 +1,33 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('partials/header')  %> 
+
+
+
+<div class="section-title" >
+	<h2>Customer Details</h2>
+</div>
+
+<div class='table '>
+	<table data-aos="fade-up" data-aos-delay="300" >
+		 <thead class ="header1">
+			<tr>
+				<th>Customer Name</th>
+				<th>Email</th>
+				<th>balance</th>
+				<th>Transfer</th>
+			</tr>
+		</thead>
+            <% for(let customer of customers){ %>
+	     <tbody class ='header2' >
+			<tr >
+				<td><%= customer.name %></td>
+                <td><%= customer.email%></td>
+                <td><%= customer.balance%></td>
+         		<td ><a class="btn select" href="/customers/<%=customer._id%>">Select</a></td>
+			</tr> 
+		</tbody>
+		 <% } %>
+	</table>
+</div>
+
+    
+<%- include('partials/footer')  %> 

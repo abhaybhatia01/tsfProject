@@ -1,0 +1,24 @@
+<%- include('partials/header')  %> 
+
+<table>
+    <tr class ="header1">
+        <th>Transferred From</th>
+        <th>Transferred To</th>
+        <th>Transferred Amount</th>
+    </tr>
+
+<% for(let transaction of transactions){ %>
+    <tr class ="header2">
+        <td><%= transaction.fromName %></td>
+        <td><%= transaction.toName %></td>
+        <td><%= transaction.transferAmount %></td>
+    </tr>
+<% } %>
+</table>
+
+</div>
+
+
+
+<%- include('partials/header')  %> 
+

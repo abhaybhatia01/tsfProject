@@ -1,3 +1,9 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<%- include('partials/header') %>
+
+<div class="error section-title">
+    <h2>OOPS, Invalid Operation !!!</h2>
+    <h2>Check Amounts</h2>
+    <h2> Or Try Again :(</h2>
+</div>
+
+<%- include('partials/footer') %>
