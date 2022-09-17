@@ -1645,12 +1645,15 @@ main{
   margin-right:auto;
   margin-bottom:10px ;
 }
+
 th,td{
   padding:5px 30px 5px;
 }
+
 th{
   text-align: center;
 }
+
 input,input:focus-within{
   border-radius: 50px;
   border: 2px solid #3498db;
@@ -1687,3 +1690,48 @@ input,input:focus-within{
 .select:hover a{
 color:white;
 }
+.amount-page-title{
+  text-align: center;
+}
+.amount-page-info{
+  text-align:center;
+}
+form{
+  width:max-content;
+}
+.amount-page-input{
+  text-align:center;
+  margin: auto;
+}
+
+@media (max-width: 720px) {
+  .view-header, table, h3, .form, form, .error {
+    max-width: 414px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom:10px ;
+    
+  }
+  th,td{
+    font-size: 10px;
+    padding:2px;
+  }
+
+
+  .section-title h2 {
+    font-size: 17px;
+  }
+  .amount-page-heading{
+    width:max-content;
+    margin:auto;
+  }
+  .box-container{
+    margin:auto;
+
+  }
+
+}
+
+/* *,::before,::after{
+  border:1px solid red;
+} */

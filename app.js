@@ -78,6 +78,9 @@ app.put("/customers/:id1/:id2", async(req, res) =>{
             await newTransaction.save();
             res.redirect("/customers");
           }
+          else{
+            res.render('error');
+        }
     }
   else{
       res.render('error');
