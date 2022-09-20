@@ -1,3 +1,9 @@
+if(process.env.NODE_ENV !=="production"){
+  require('dotenv').config()
+ 
+}
+
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -13,7 +19,9 @@ const Transaction= require('./models/transaction')
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/bankdb',{
+
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/bankdb' ;
+mongoose.connect(dbUrl,{
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
