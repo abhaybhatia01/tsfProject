@@ -105,3 +105,5 @@ app.get("/history", async(req, res)=>{
 app.listen(process.env.PORT || 3000,()=>{
 	console.log('up and running');
    });
+
+   module.exports = app;
